@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Урок 16</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--+ Header -->
+        <div class="header">
+            <!--// Header Top  -->
+            <div class="header__top">
+                <div data-da=".header__wrapper, 991.98" class="header__container header__container--top">
+                    <div class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Про нас</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Оплата</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Доставка та збірка</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Відгуки</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Блок</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__support support">
+                        <p class="support__text">Допомога і консультація: </p>
+                        <ul class="support__list">
+                            <li class="support__item">
+                                <a class="support__link" href="#!">
+                                    <svg class="support__svg">
+                                        <use xlink:href="img\sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="support__item">
+                                <a class="support__link" href="#!">
+                                    <svg class="support__svg">
+                                        <use xlink:href="img\sprite.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="support__item">
+                                <a class="support__link" href="#!">
+                                    <svg class="support__svg">
+                                        <use xlink:href="img\sprite.svg#viber"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- / Support Language -->
+                        <div class="support__language language-box">
+                            <select class="language-box__list" id="language-select">
+                                <option class="language-box__item" value="ua">UA</option>
+                                <option class="language-box__item" value="en">EN</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Header-Main  -->
+            <div class="header__main">
+                <div class="header__container">
+                    <button type="button" class="menu-icon">
+                        <span class=""></span>
+                    </button>
+                    <!--/ Header-Main  logo -->
+                    <div class="header__logo logo-header">
+                        <img class="logo-header__img logo-header__img--min" src="img/header/logo-header-min.svg" alt="Логотип Krovato min">
+                        <img class="logo-header__img logo-header__img--max" src="img/header/logo-header.svg" alt="Логотип Krovato">
+                    </div>                     
+                    <!--/ Header-Main  button -->
+                    <div class="header__btn btn-header">
+                        <button class="btn-header__main btn" type="button">
+                            <span class="btn__span"></span>
+                            Каталог
+                        </button>
+                    </div>
+                    <!--/ Header-Main search form -->
+                    <form class="header__searche search-form">
+                        <input type="text" class="search-form__input" placeholder="Пошук товарів">
+                        <button type="submit" class="search-form__button button-search">
+                            <span class="button-search__icon"></span>
+                        </button>
+                    </form>
+                    <!--/ Header-Main phone box -->
+                    <div class="header__phone phone-header">
+                        <div class="phone-header__inner">
+                            <div class="phone-header__phone-icon">
+                                <a href="tel:0679294545">
+                                    <img src="img/header/icon-tel.svg" alt="icon telephone">
+                                </a>                            
+                            </div>
+                            <div class="phone-header__number-box box-number">
+                                <div class="box-number__schedule">Щодня з 9:00 до 18:00</div>
+                                <div class="box-number__phone phone-contacts-box">
+                                    <a class="phone-contacts-box__current" href="tel:0679294545">
+                                        067 929-45-45
+                                    </a>
+                                    <ul class="phone-contacts-box__list">
+                                        <li class="phone-contacts-box__item">
+                                            <a class="phone-contacts-box__link" href="tel:0679294545">
+                                                067 929-45-45
+                                            </a>
+                                        </li>
+                                        <li class="phone-contacts-box__item">
+                                            <a class="phone-contacts-box__link" href="tel:0679294545">
+                                                067 929-45-45
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="phone-header__arrow-icon icon-arrow-box">
+                                <img
+                                  class="icon-arrow-box__img"
+                                  src="img/header/header-arrow.svg"
+                                  alt="icon arrow"
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <!--/ Header-Main icon box -->
+                    <div class="header__icon icon-header">
+                        <a class="icon-header__link icon-header__link--mobile" href="#!">
+                            <img
+                              class="icon-header__img"
+                              src="img/header/poisk-media-mobile.svg"
+                              alt="icon media mobile"
+                            >
+                        </a>
+                        <a class="icon-header__link" href="#!">
+                            <img
+                              class="icon-header__img"
+                              src="img/header/obrane.svg"
+                              alt="icon obrane"
+                            >
+                        </a>
+                        <a class="icon-header__link" href="#!">
+                            <img
+                              class="icon-header__img"
+                              src="img/header/korzina.svg"
+                              alt="icon korzina"
+                            >
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+            <!--// Header Bottom  -->
+            <div class="header__bottom">
+                <div class="header__container header__container--bottom">
+                    <div class="header__wrapper">
+                        <ul class="header__left-list list-header-bottom">
+                            <li class="list-header-bottom__item">                                
+                                <a class="list-header-bottom__link" href="/">
+                                    <img
+                                      class="list-header-bottom__icon"
+                                      src="img/header/akcii.svg"
+                                      alt="Icon star for promotion"
+                                    >
+                                    Акції
+                                </a>
+                            </li>
+                            <li class="list-header-bottom__item">                                
+                                <a class="list-header-bottom__link" href="/">
+                                    <img class="list-header-bottom__icon" src="img/header/sale.svg" alt="Icon sale">
+                                    Розпродаж
+                                </a>
+                            </li>
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">
+                                <img class="list-header-bottom__icon" src="img/header/credit.svg" alt="Icon credit">
+                                    Купити в кредит
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="header__right-list list-header-bottom">
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">Дитяча</a>
+                            </li>
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">Кухня</a>
+                            </li>
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">Ванна</a>
+                            </li>
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">Спальня</a>
+                            </li>
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">Передпокій</a>
+                            </li>
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">Вітальня</a>
+                            </li>
+                            <li class="list-header-bottom__item">
+                                <a class="list-header-bottom__link" href="/">Офіс</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/script.js"></script>
+<script src="js/dynamic_adapt.js"></script>
+</html>

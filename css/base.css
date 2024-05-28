@@ -1,0 +1,36 @@
+body {
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    color: var(--color-grey);
+    background-color: var(--color-light);
+}
+
+[class*='__container'] {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+[class*='__title'] {
+    color: var(--color-dark);
+    font-size: 40px;
+    font-weight: var(--font-wight-semibold);
+    line-height: 1.2;
+}
+
+/*+ Button  */
+.btn {
+    background-color: var(--color-yellow);
+    color: var(--color-light-bg);
+    font-size: 19px;
+    font-weight: var(--font-wight-semibold);
+    line-height: 1.26;
+    border-radius: 8px;
+}
+
+@media (any-hover: hover) {
+    a:hover {
+        color: var(--color-yellow);
+        text-decoration: underline;
+    }
+}

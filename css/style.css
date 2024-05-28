@@ -1,0 +1,497 @@
+@import url(fonts.css);
+@import url(reset.css);
+@import url(variables.css);
+@import url(base.css);
+
+/* * {
+    outline: 1px solid red;
+} */
+
+/*+ Header */
+/* // Header Top */
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    margin-bottom: 70px;
+}
+
+.header__top {
+    padding-block: 1rem;
+}
+
+.header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px 30px;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 30px;
+}
+
+.nav__item {
+    line-height: 1.875;
+}
+
+.support {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 30px;
+    align-items: center;
+}
+.support__text {
+    font-size: 16px;
+    line-height: 1.875;
+}
+.support__list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+/* .support__item, */
+.support__svg {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.support__item:hover {
+    transform: scale(1.2);
+}
+
+.language-box__list,
+.language-box__item {
+    font-size: 19px;
+    font-weight: var(--font-wight-semibold);
+    line-height: 1.26;
+}
+
+/* // Header Main */
+.header__main {
+    background-color: var(--color-light-bg);
+    padding-block: 25px;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 250px;
+    gap: 5px;
+}
+
+/*? замість цього строка №285  */
+/* .header__main::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 25px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-light);
+} */
+
+.btn-header__main {
+    display: flex;
+    align-items: center;
+    padding: 11px 20px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease-in-out;
+}
+
+.btn-header__main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn-header__main:hover .btn__span {
+    background-image: url(../img/header/btn-catalog-active.svg);
+}
+
+.btn__span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/header/btn-catalog.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+    margin-right: 10px;
+}
+
+/*/ Main Search form */
+.search-form {
+    display: flex;
+    flex-grow: 1;
+    gap: 5px;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--color-grey-light);
+    background: var(--color-light-bg);
+    padding-inline: 15px;
+}
+
+.search-form:focus-within {
+    border: 1px solid var(--color-yellow);
+    box-shadow: 0 0 8px var(--color-yellow);
+}
+
+/* ! милиця мабуть  */
+.search-form__input {
+    flex-grow: 1;
+    color: var(--color-dark);
+    line-height: 1.875;
+}
+
+.search-form__input::placeholder {
+    color: var(--color-grey-light);
+}
+
+.search-form__input:focus::placeholder {
+    opacity: 0;
+}
+
+.search-form__button {
+    display: flex;
+}
+
+.button-search__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/header/poisk.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*/ Header-Main phone box */
+.phone-header {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.phone-header__inner {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.phone-header__phone-icon,
+.icon-arrow-box {
+    flex-shrink: 0;
+}
+
+.box-number {
+    /* position: relative; */
+    display: flex;
+    min-width: 136px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-number__schedule {
+    font-size: 13px;
+    font-weight: var(--font-wight-light);
+    line-height: 1.69;
+}
+
+.box-number__phone {
+    position: relative;
+    color: var(--color-dark);
+    font-size: 20px;
+    font-weight: var(--font-wight-semibold);
+    line-height: 1.4;
+}
+
+/*! new - not for mentors */
+.phone-contacts-box__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    border-color: red;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+/* @media (any-hover: hover) {
+    .phone-contacts-box:hover .phone-contacts-box__list {
+        top: 100%;
+        opacity: 1;
+        pointer-events: all;
+    }
+} */
+
+@media (any-hover: hover) {
+    .phone-header__inner:hover .phone-contacts-box__list {
+        top: 100%;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.phone-contacts-box__item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+/* / Header-Main icon box */
+.icon-header {
+    display: flex;
+    gap: 5px 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: transform 0.5s ease;
+}
+/** розміри для батьківського елементу якщо будуть іконки іншого розміру */
+.phone-header__phone-icon,
+.icon-header__link {
+    width: 50px;
+    height: 50px;
+}
+
+/** іконки під розмір батьківського елементу */
+.icon-header__link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icon-header__link--mobile {
+    display: none;
+}
+
+@media (any-hover: hover) {
+    .icon-header__img:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* // Header Bottom */
+.header__bottom {
+    background-color: var(--color-light-bg);
+    padding-block: 18px;
+    border-top: 2px solid var(--color-light);
+}
+
+.header__wrapper {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px 20px;
+}
+
+.header__left-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+}
+
+.header__right-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+}
+
+.list-header-bottom__item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list-header-bottom__link {
+    font-size: 18px;
+    font-weight: var(--font-wight-semibold);
+    line-height: 1.26;
+}
+/*? не обов'язково */
+/* .list-header-bottom__icon {
+    margin-right: 5px;
+} */
+
+.menu-icon {
+    display: none;
+}
+
+._dynamic_adapt_.header__container.header__container--top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+._dynamic_adapt_.header__container.header__container--top ~ .nav__item {
+    line-height: 1.1;
+}
+
+/*+ Media */
+/* ---------1230------- */
+@media (width<=1230px) {
+    .header__container {
+        column-gap: 20px;
+    }
+
+    .logo-header__img--min {
+        display: none;
+    }
+
+    .header__logo {
+        flex: 0 0 167px;
+    }
+
+    .header__right-list {
+        justify-content: end;
+    }
+
+    .support,
+    .nav__list,
+    .header__right-list,
+    .header__left-list {
+        column-gap: 15px;
+    }
+}
+
+@media (width<=1080px) {
+    .btn__span {
+        display: none;
+    }
+}
+
+/* ------------ 991.98------------ */
+@media (width<=991.98px) {
+    .box-number,
+    .icon-arrow-box,
+    .support__text {
+        display: none;
+    }
+    .header__wrapper,
+    .header__left-list,
+    .header__right-list {
+        flex-direction: column;
+    }
+    .header__left-list {
+        justify-content: center;
+    }
+    .header__right-list {
+        justify-content: center;
+    }
+
+    .header__container {
+        column-gap: 15px;
+    }
+
+    img.logo-header__img--max {
+        width: 150px;
+    }
+
+    .header__container--bottom {
+    }
+
+    /** burger */
+    .menu-icon {
+        display: block;
+        position: relative;
+        height: 18px;
+        width: 30px;
+        flex-shrink: 0;
+        z-index: 2;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after,
+    .menu-icon span {
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+        background-color: #000;
+    }
+    .menu-icon::before {
+        top: 0;
+    }
+    .menu-icon::after {
+        bottom: 0;
+    }
+    .menu-icon span {
+        top: 50%;
+        transform: translate(0px, -50%);
+    }
+
+    /** Переноситься в бургер */
+    .header__top {
+        display: none;
+    }
+
+    .header__bottom {
+        display: none;
+    }
+
+    .nav__list,
+    .support {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 18px;
+        font-weight: var(--font-wight-semibold);
+    }
+
+    ._dynamic_adapt_.header__container.header__container--top {
+        padding: 0;
+        margin: 0;
+    }
+}
+/* -------- 819.98------------ */
+@media (width<=819.98px) {
+    .search-form {
+        display: none;
+    }
+    .icon-header__link--mobile {
+        display: block;
+    }
+    .icon-header,
+    .header__container {
+        column-gap: 10px;
+    }
+}
+
+/* -----------704.98----------- */
+@media (width<=704.98px) {
+    .support__list {
+        display: none;
+    }
+    .icon-header,
+    .header__container {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (width<=569.98px) {
+    .header__top {
+        display: none;
+    }
+
+    .icon-header,
+    .header__container {
+        justify-content: center;
+        column-gap: 20px;
+        flex-wrap: wrap;
+    }
+}
