@@ -463,7 +463,7 @@
         display: block;
         position: fixed;
         top: 0;
-        right: -100%;
+        transform: translateX(-100%);
         transition: all 0.3s;
         width: 100%;
         height: 100%;
